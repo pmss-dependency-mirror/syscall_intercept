@@ -33,6 +33,7 @@ cmake_minimum_required(VERSION 3.3)
 project(syscall_intercept C ASM)
 
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+add_compile_options(-Wno-error)
 # Setting CMAKE_DISABLE_IN_SOURCE_BUILD to ON should
 # disallow in source builds, but in practice it doesn't seem
 # to disallow it. Check the paths as well:
