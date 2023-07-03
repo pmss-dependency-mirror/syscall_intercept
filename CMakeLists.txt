@@ -151,6 +151,10 @@ target_link_libraries(syscall_intercept_shared
 	"-Wl,--push-state,${CAPSTONE_LINK_MODE} -lcapstone -Wl,--pop-state"
 	"-Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/version.map")
 
+target_include_directories(syscall_intercept_shared
+	INTERFACE include
+)
+
 target_link_libraries(syscall_intercept_static
 	INTERFACE ${CMAKE_DL_LIBS} ${capstone_LIBRARIES})
 
